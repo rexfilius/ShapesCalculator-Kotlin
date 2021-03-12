@@ -4,11 +4,11 @@ import com.github.rexfilius.shapescalculatorkotlin.screens.INVALID_DATA
 
 class Triangle: Shape() {
 
-    lateinit var triangle: Triangle
+    private lateinit var triangle: Triangle
 
-    fun getArea() = 0.5 * (baseLength * height)
+    private fun getArea() = 0.5 * (baseLength * height)
 
-    fun getPerimeter() = sideLength1 + sideLength2 + baseLength
+    private fun getPerimeter() = sideLength1 + sideLength2 + baseLength
 
     fun calculateArea() {
         triangle= Triangle()

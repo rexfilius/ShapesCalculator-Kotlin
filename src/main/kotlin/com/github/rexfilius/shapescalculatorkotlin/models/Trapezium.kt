@@ -4,11 +4,11 @@ import com.github.rexfilius.shapescalculatorkotlin.screens.INVALID_DATA
 
 class Trapezium : Shape() {
 
-    lateinit var trapezium: Trapezium
+    private lateinit var trapezium: Trapezium
 
-    fun getArea() = (0.5 * (topLength + baseLength)) * height
+    private fun getArea() = (0.5 * (topLength + baseLength)) * height
 
-    fun getPerimeter() = topLength + baseLength + sideLength1 + sideLength2
+    private fun getPerimeter() = topLength + baseLength + sideLength1 + sideLength2
 
     fun calculateArea() {
         trapezium = Trapezium()

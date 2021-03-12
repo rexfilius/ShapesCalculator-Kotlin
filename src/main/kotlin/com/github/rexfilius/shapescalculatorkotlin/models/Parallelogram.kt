@@ -1,15 +1,14 @@
 package com.github.rexfilius.shapescalculatorkotlin.models
 
 import com.github.rexfilius.shapescalculatorkotlin.screens.INVALID_DATA
-import java.lang.NumberFormatException
 
 class Parallelogram : Shape() {
 
-    lateinit var parallelogram: Parallelogram
+    private lateinit var parallelogram: Parallelogram
 
-    fun getArea() = baseLength * height
+    private fun getArea() = baseLength * height
 
-    fun getPerimeter() = 2 * (baseLength + sideLength)
+    private fun getPerimeter() = 2 * (baseLength + sideLength)
 
     fun calculateArea() {
         parallelogram = Parallelogram()

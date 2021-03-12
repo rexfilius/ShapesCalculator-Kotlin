@@ -4,11 +4,11 @@ import com.github.rexfilius.shapescalculatorkotlin.screens.INVALID_DATA
 
 class Rectangle : Shape() {
 
-    lateinit var rectangle: Rectangle
+    private lateinit var rectangle: Rectangle
 
-    fun getArea() = length * breadth
+    private fun getArea() = length * breadth
 
-    fun getPerimeter() = 2 * (length * breadth)
+    private fun getPerimeter() = 2 * (length * breadth)
 
     fun calculateArea() {
         rectangle = Rectangle()

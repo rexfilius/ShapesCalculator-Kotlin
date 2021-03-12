@@ -1,15 +1,14 @@
 package com.github.rexfilius.shapescalculatorkotlin.models
 
 import com.github.rexfilius.shapescalculatorkotlin.screens.INVALID_DATA
-import java.lang.NumberFormatException
 
 class Circle : Shape() {
 
-    lateinit var circle: Circle
+    private lateinit var circle: Circle
 
-    fun getArea() = Math.PI * radius * radius
+    private fun getArea() = Math.PI * radius * radius
 
-    fun getPerimeter() = 2 * Math.PI * radius
+    private fun getPerimeter() = 2 * Math.PI * radius
 
     fun calculateArea() {
         circle = Circle()
