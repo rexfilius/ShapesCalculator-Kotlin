@@ -14,11 +14,7 @@ class Circle : Shape() {
         circle = Circle()
         while (true) {
             try {
-                println("Type in the radius of the Circle")
-                val arg = readLine()!!.toDouble()
-                circle.radius = arg
-                println("Radius: $arg")
-
+                getRadiusOfCircle()
                 println("Area of circle: ${circle.getArea()}")
                 break
             } catch (e: NumberFormatException) {
@@ -31,17 +27,20 @@ class Circle : Shape() {
         circle = Circle()
         while (true) {
             try {
-                println("Type in the radius of the Circle")
-                val arg = readLine()!!.toDouble()
-                circle.radius = arg
-                println("Radius: $arg")
-
+                getRadiusOfCircle()
                 println("Perimeter of circle: ${circle.getPerimeter()}")
                 break
             } catch (e: NumberFormatException) {
                 println(INVALID_DATA)
             }
         }
+    }
+
+    private fun getRadiusOfCircle() {
+        println("Type in the radius of the Circle")
+        val arg = readLine()!!.toDouble()
+        circle.radius = arg
+        println("Radius: $arg")
     }
 
 }
