@@ -14,16 +14,7 @@ class Rectangle : Shape() {
         rectangle = Rectangle()
         while (true) {
             try {
-                println("Type in the Length of the Rectangle")
-                val arg1 = readLine()!!.toDouble()
-                rectangle.length = arg1
-                println("Length: $arg1")
-
-                println("Type in the Breadth of the Rectangle")
-                val arg2 = readLine()!!.toDouble()
-                rectangle.breadth = arg2
-                println("Breadth: $arg2")
-
+                getLengthAndBreadth()
                 println("Area of Rectangle: ${rectangle.getArea()}")
                 break
             } catch (e: NumberFormatException) {
@@ -36,21 +27,24 @@ class Rectangle : Shape() {
         rectangle = Rectangle()
         while (true) {
             try {
-                println("Type in the Length of the Rectangle")
-                val arg1 = readLine()!!.toDouble()
-                rectangle.length = arg1
-                println("Length: $arg1")
-
-                println("Type in the Breadth of the Rectangle")
-                val arg2 = readLine()!!.toDouble()
-                rectangle.breadth = arg2
-                println("Breadth: $arg2")
-
+                getLengthAndBreadth()
                 println("Perimeter of Rectangle: ${rectangle.getPerimeter()}")
                 break
             } catch (e: NumberFormatException) {
                 println(INVALID_DATA)
             }
         }
+    }
+
+    private fun getLengthAndBreadth() {
+        println("Type in the Length of the Rectangle")
+        val arg1 = readLine()!!.toDouble()
+        rectangle.length = arg1
+        println("Length: $arg1")
+
+        println("Type in the Breadth of the Rectangle")
+        val arg2 = readLine()!!.toDouble()
+        rectangle.breadth = arg2
+        println("Breadth: $arg2")
     }
 }

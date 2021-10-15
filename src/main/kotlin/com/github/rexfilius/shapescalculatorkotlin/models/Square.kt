@@ -14,11 +14,7 @@ class Square : Shape() {
         square = Square()
         while (true) {
             try {
-                println("Type in the SideLength of the Square")
-                val arg = readLine()!!.toDouble()
-                square.sideLength = arg
-                println("SideLength: $arg")
-
+                getSideLength()
                 println("Area of Square is: ${square.getArea()}")
                 break
             } catch (e: NumberFormatException) {
@@ -31,16 +27,19 @@ class Square : Shape() {
         square = Square()
         while (true) {
             try {
-                println("Type in the SideLength of the Square")
-                val arg = readLine()!!.toDouble()
-                square.sideLength = arg
-                println("SideLength: $arg")
-
+                getSideLength()
                 println("Perimeter of Square: ${square.getPerimeter()}")
                 break
             } catch (e: NumberFormatException) {
                 println(INVALID_DATA)
             }
         }
+    }
+
+    private fun getSideLength() {
+        println("Type in the SideLength of the Square")
+        val arg = readLine()!!.toDouble()
+        square.sideLength = arg
+        println("SideLength: $arg")
     }
 }
