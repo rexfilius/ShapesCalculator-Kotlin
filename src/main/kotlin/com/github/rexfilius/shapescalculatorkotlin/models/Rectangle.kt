@@ -6,16 +6,16 @@ class Rectangle : Shape() {
 
     private lateinit var rectangle: Rectangle
 
-    private fun getArea() = length * breadth
+    override fun area() = length * breadth
 
-    private fun getPerimeter() = 2 * (length * breadth)
+    override fun perimeter() = 2 * (length * breadth)
 
-    fun calculateArea() {
+    override fun calculateArea() {
         rectangle = Rectangle()
         while (true) {
             try {
                 getLengthAndBreadth()
-                println("Area of Rectangle: ${rectangle.getArea()}")
+                println("Area of Rectangle: ${rectangle.area()}")
                 break
             } catch (e: NumberFormatException) {
                 println(INVALID_DATA)
@@ -23,12 +23,12 @@ class Rectangle : Shape() {
         }
     }
 
-    fun calculatePerimeter() {
+    override fun calculatePerimeter() {
         rectangle = Rectangle()
         while (true) {
             try {
                 getLengthAndBreadth()
-                println("Perimeter of Rectangle: ${rectangle.getPerimeter()}")
+                println("Perimeter of Rectangle: ${rectangle.perimeter()}")
                 break
             } catch (e: NumberFormatException) {
                 println(INVALID_DATA)

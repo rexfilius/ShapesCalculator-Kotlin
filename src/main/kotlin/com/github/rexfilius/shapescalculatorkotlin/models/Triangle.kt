@@ -10,7 +10,7 @@ class Triangle: Shape() {
 
     private fun getPerimeter() = sideLength1 + sideLength2 + baseLength
 
-    fun calculateArea() {
+    override fun calculateArea() {
         triangle= Triangle()
         while(true) {
             try {
@@ -32,7 +32,7 @@ class Triangle: Shape() {
         }
     }
 
-    fun calculatePerimeter() {
+    override fun calculatePerimeter() {
         triangle = Triangle()
         while(true) {
             try {

@@ -6,11 +6,11 @@ class Parallelogram : Shape() {
 
     private lateinit var parallelogram: Parallelogram
 
-    private fun getArea() = baseLength * height
+    override fun area() = baseLength * height
 
-    private fun getPerimeter() = 2 * (baseLength + sideLength)
+    override fun perimeter() = 2 * (baseLength + sideLength)
 
-    fun calculateArea() {
+    override fun calculateArea() {
         parallelogram = Parallelogram()
         while (true) {
             try {
@@ -24,7 +24,7 @@ class Parallelogram : Shape() {
                 parallelogram.height = arg2
                 println("Height: $arg2")
 
-                println("Area of parallelogram: ${parallelogram.getArea()}")
+                println("Area of parallelogram: ${parallelogram.area()}")
                 break
             } catch (e: NumberFormatException) {
                 println(INVALID_DATA)
@@ -32,7 +32,7 @@ class Parallelogram : Shape() {
         }
     }
 
-    fun calculatePerimeter() {
+    override fun calculatePerimeter() {
         parallelogram = Parallelogram()
         while (true) {
             try {
@@ -46,7 +46,7 @@ class Parallelogram : Shape() {
                 parallelogram.sideLength = arg2
                 println("SideLength: $arg2")
 
-                println("Perimeter of Parallelogram: ${parallelogram.getPerimeter()}")
+                println("Perimeter of Parallelogram: ${parallelogram.perimeter()}")
                 break
             } catch (e: NumberFormatException) {
                 println(INVALID_DATA)

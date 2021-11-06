@@ -6,16 +6,16 @@ class Circle : Shape() {
 
     private lateinit var circle: Circle
 
-    private fun getArea() = Math.PI * radius * radius
+    override fun area() = Math.PI * radius * radius
 
-    private fun getPerimeter() = 2 * Math.PI * radius
+    override fun perimeter() = 2 * Math.PI * radius
 
-    fun calculateArea() {
+    override fun calculateArea() {
         circle = Circle()
         while (true) {
             try {
                 getRadiusOfCircle()
-                println("Area of circle: ${circle.getArea()}")
+                println("Area of circle: ${circle.area()}")
                 break
             } catch (e: NumberFormatException) {
                 println(INVALID_DATA)
@@ -23,12 +23,12 @@ class Circle : Shape() {
         }
     }
 
-    fun calculatePerimeter() {
+    override fun calculatePerimeter() {
         circle = Circle()
         while (true) {
             try {
                 getRadiusOfCircle()
-                println("Perimeter of circle: ${circle.getPerimeter()}")
+                println("Perimeter of circle: ${circle.perimeter()}")
                 break
             } catch (e: NumberFormatException) {
                 println(INVALID_DATA)

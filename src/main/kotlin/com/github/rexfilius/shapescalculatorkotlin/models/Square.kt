@@ -6,16 +6,16 @@ class Square : Shape() {
 
     private lateinit var square: Square
 
-    private fun getArea() = sideLength * sideLength
+    override fun area() = sideLength * sideLength
 
-    private fun getPerimeter() = 4 * sideLength
+    override fun perimeter() = 4 * sideLength
 
-    fun calculateArea() {
+    override fun calculateArea() {
         square = Square()
         while (true) {
             try {
                 getSideLength()
-                println("Area of Square is: ${square.getArea()}")
+                println("Area of Square is: ${square.area()}")
                 break
             } catch (e: NumberFormatException) {
                 println(INVALID_DATA)
@@ -23,12 +23,12 @@ class Square : Shape() {
         }
     }
 
-    fun calculatePerimeter() {
+    override fun calculatePerimeter() {
         square = Square()
         while (true) {
             try {
                 getSideLength()
-                println("Perimeter of Square: ${square.getPerimeter()}")
+                println("Perimeter of Square: ${square.perimeter()}")
                 break
             } catch (e: NumberFormatException) {
                 println(INVALID_DATA)

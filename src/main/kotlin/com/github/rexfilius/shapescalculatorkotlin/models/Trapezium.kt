@@ -6,11 +6,11 @@ class Trapezium : Shape() {
 
     private lateinit var trapezium: Trapezium
 
-    private fun getArea() = (0.5 * (topLength + baseLength)) * height
+    override fun area() = (0.5 * (topLength + baseLength)) * height
 
-    private fun getPerimeter() = topLength + baseLength + sideLength1 + sideLength2
+    override fun perimeter() = topLength + baseLength + sideLength1 + sideLength2
 
-    fun calculateArea() {
+    override fun calculateArea() {
         trapezium = Trapezium()
         while (true) {
             try {
@@ -29,7 +29,7 @@ class Trapezium : Shape() {
                 trapezium.height = arg3
                 println("Height: $arg3")
 
-                println("Area of Trapezium: ${trapezium.getArea()}")
+                println("Area of Trapezium: ${trapezium.area()}")
                 break
             } catch (e: NumberFormatException) {
                 println(INVALID_DATA)
@@ -37,7 +37,7 @@ class Trapezium : Shape() {
         }
     }
 
-    fun calculatePerimeter() {
+    override fun calculatePerimeter() {
         trapezium = Trapezium()
         while (true) {
             try {
@@ -61,7 +61,7 @@ class Trapezium : Shape() {
                 trapezium.sideLength1 = arg4
                 println("SideLength-2: $arg4")
 
-                println("Perimeter of Trapezium: ${trapezium.getPerimeter()}")
+                println("Perimeter of Trapezium: ${trapezium.perimeter()}")
                 break
             } catch (e: NumberFormatException) {
                 println(INVALID_DATA)
