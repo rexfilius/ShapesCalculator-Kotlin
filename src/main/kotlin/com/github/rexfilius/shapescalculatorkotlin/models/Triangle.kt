@@ -6,9 +6,9 @@ class Triangle: Shape() {
 
     private lateinit var triangle: Triangle
 
-    private fun getArea() = 0.5 * (baseLength * height)
+    override fun area() = 0.5 * (baseLength * height)
 
-    private fun getPerimeter() = sideLength1 + sideLength2 + baseLength
+    override fun perimeter() = sideLength1 + sideLength2 + baseLength
 
     override fun calculateArea() {
         triangle= Triangle()
@@ -24,7 +24,7 @@ class Triangle: Shape() {
                 triangle.height = arg2
                 println("Height: $arg2")
 
-                println("Area of Triangle: ${triangle.getArea()}")
+                println("Area of Triangle: ${triangle.area()}")
                 break
             } catch (e: NumberFormatException) {
                 println(INVALID_DATA)
@@ -51,7 +51,7 @@ class Triangle: Shape() {
                 triangle.baseLength = arg3
                 println("BaseLength: $arg3")
 
-                println("Perimeter of Triangle: ${triangle.getPerimeter()}")
+                println("Perimeter of Triangle: ${triangle.perimeter()}")
                 break
             } catch (e: NumberFormatException) {
                 println(INVALID_DATA)
