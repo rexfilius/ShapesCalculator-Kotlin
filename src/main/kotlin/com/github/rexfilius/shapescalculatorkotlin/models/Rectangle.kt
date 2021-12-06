@@ -38,12 +38,12 @@ class Rectangle : Shape() {
 
     private fun getLengthAndBreadth() {
         println("Type in the Length of the Rectangle")
-        val arg1 = readLine()!!.toDouble()
+        val arg1 = readln().toDouble()
         rectangle.length = arg1
         println("Length: $arg1")
 
         println("Type in the Breadth of the Rectangle")
-        val arg2 = readLine()!!.toDouble()
+        val arg2 = readln().toDouble()
         rectangle.breadth = arg2
         println("Breadth: $arg2")
     }

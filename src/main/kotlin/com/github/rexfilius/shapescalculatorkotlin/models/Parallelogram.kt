@@ -15,12 +15,12 @@ class Parallelogram : Shape() {
         while (true) {
             try {
                 println("Type in the BaseLength of the Parallelogram")
-                val arg1 = readLine()!!.toDouble()
+                val arg1 = readln().toDouble()
                 parallelogram.baseLength = arg1
                 println("BaseLength: $arg1")
 
                 println("Type in the Height of the Parallelogram")
-                val arg2 = readLine()!!.toDouble()
+                val arg2 = readln().toDouble()
                 parallelogram.height = arg2
                 println("Height: $arg2")
 
@@ -37,12 +37,12 @@ class Parallelogram : Shape() {
         while (true) {
             try {
                 println("Type in the BaseLength of the Parallelogram")
-                val arg1 = readLine()!!.toDouble()
+                val arg1 = readln().toDouble()
                 parallelogram.baseLength = arg1
                 println("BaseLength: $arg1")
 
                 println("Type in the SideLength of the Parallelogram")
-                val arg2 = readLine()!!.toDouble()
+                val arg2 = readln().toDouble()
                 parallelogram.sideLength = arg2
                 println("SideLength: $arg2")
 

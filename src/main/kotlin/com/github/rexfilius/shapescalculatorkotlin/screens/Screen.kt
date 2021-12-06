@@ -13,7 +13,7 @@ fun firstMenu(): String {
             Select a Shape: [Type it in]
             """.trimIndent()
     println(firstMessage)
-    select = readLine()!!.toString()
+    select = readln()
     checkFirstMenu()
     return select
 }
@@ -30,7 +30,7 @@ private fun checkFirstMenu() {
 
 fun secondMenu(): String {
     println("What do you want to calculate: Area? or Perimeter? [Type it in]")
-    parameter = readLine()!!.toString()
+    parameter = readln()
     checkSecondMenu()
     return parameter
 }
@@ -45,7 +45,7 @@ private fun checkSecondMenu() {
 fun thirdMenu() {
     println("\nPress 1 to go back to MENU\nPress 2 to END")
     try {
-        when (readLine()!!.toInt()) {
+        when (readln().toInt()) {
             1 -> runCalculator()
             2 -> println("End of Program\n")
             else -> {

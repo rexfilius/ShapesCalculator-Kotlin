@@ -38,7 +38,7 @@ class Circle : Shape() {
 
     private fun getRadiusOfCircle() {
         println("Type in the radius of the Circle")
-        val arg = readLine()!!.toDouble()
+        val arg = readln().toDouble()
         circle.radius = arg
         println("Radius: $arg")
     }

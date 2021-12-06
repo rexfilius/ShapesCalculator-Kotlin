@@ -38,7 +38,7 @@ class Square : Shape() {
 
     private fun getSideLength() {
         println("Type in the SideLength of the Square")
-        val arg = readLine()!!.toDouble()
+        val arg = readln().toDouble()
         square.sideLength = arg
         println("SideLength: $arg")
     }
