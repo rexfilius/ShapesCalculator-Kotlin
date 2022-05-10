@@ -8,3 +8,12 @@ interface Measurable {
     fun calculateArea()
     fun calculatePerimeter()
 }
+
+enum class ShapeList {
+    Triangle,
+    Circle,
+    Square,
+    Rectangle,
+    Parallelogram,
+    Trapezium,
+}

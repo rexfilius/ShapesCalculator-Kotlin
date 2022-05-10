@@ -1,6 +1,7 @@
-package com.github.rexfilius.shapescalculatorkotlin.models
+package com.github.rexfilius.shapescalculatorkotlin.models.shape
 
-import com.github.rexfilius.shapescalculatorkotlin.screens.INVALID_DATA
+import com.github.rexfilius.shapescalculatorkotlin.models.Shape
+import com.github.rexfilius.shapescalculatorkotlin.screens.INVALID_INPUT
 
 class Circle : Shape() {
 
@@ -16,9 +17,11 @@ class Circle : Shape() {
             try {
                 getRadiusOfCircle()
                 println("Area of circle: ${circle.area()}")
+				// How to show 2 decimal places
+				// println("Floor area: %.2f".format(floorArea()))
                 break
             } catch (e: NumberFormatException) {
-                println(INVALID_DATA)
+                println(INVALID_INPUT)
             }
         }
     }
@@ -31,7 +34,7 @@ class Circle : Shape() {
                 println("Perimeter of circle: ${circle.perimeter()}")
                 break
             } catch (e: NumberFormatException) {
-                println(INVALID_DATA)
+                println(INVALID_INPUT)
             }
         }
     }

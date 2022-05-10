@@ -1,6 +1,7 @@
-package com.github.rexfilius.shapescalculatorkotlin.models
+package com.github.rexfilius.shapescalculatorkotlin.models.shape
 
-import com.github.rexfilius.shapescalculatorkotlin.screens.INVALID_DATA
+import com.github.rexfilius.shapescalculatorkotlin.models.Shape
+import com.github.rexfilius.shapescalculatorkotlin.screens.INVALID_INPUT
 
 class Rectangle : Shape() {
 
@@ -18,7 +19,7 @@ class Rectangle : Shape() {
                 println("Area of Rectangle: ${rectangle.area()}")
                 break
             } catch (e: NumberFormatException) {
-                println(INVALID_DATA)
+                println(INVALID_INPUT)
             }
         }
     }
@@ -31,7 +32,7 @@ class Rectangle : Shape() {
                 println("Perimeter of Rectangle: ${rectangle.perimeter()}")
                 break
             } catch (e: NumberFormatException) {
-                println(INVALID_DATA)
+                println(INVALID_INPUT)
             }
         }
     }

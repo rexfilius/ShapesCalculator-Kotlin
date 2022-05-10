@@ -1,6 +1,40 @@
 package com.github.rexfilius.shapescalculatorkotlin.screens
 
-import com.github.rexfilius.shapescalculatorkotlin.models.*
+import com.github.rexfilius.shapescalculatorkotlin.models.ShapeList
+import com.github.rexfilius.shapescalculatorkotlin.models.measureShape
+import com.github.rexfilius.shapescalculatorkotlin.models.shape.*
+
+fun runCalculator2() {
+    val selectedMeasurement: Int
+    when(menuToSelectShape()) {
+        ShapeList.Triangle -> {
+            selectedMeasurement = menuToSelectMeasurement()
+            measureShape(selectedMeasurement, Triangle())
+        }
+        ShapeList.Circle -> {
+            selectedMeasurement = menuToSelectMeasurement()
+            measureShape(selectedMeasurement, Circle())
+        }
+        ShapeList.Square -> {
+            selectedMeasurement = menuToSelectMeasurement()
+            measureShape(selectedMeasurement, Square())
+        }
+        ShapeList.Rectangle -> {
+            selectedMeasurement = menuToSelectMeasurement()
+            measureShape(selectedMeasurement, Rectangle())
+        }
+        ShapeList.Parallelogram -> {
+            selectedMeasurement = menuToSelectMeasurement()
+            measureShape(selectedMeasurement, Parallelogram())
+        }
+        ShapeList.Trapezium -> {
+            selectedMeasurement = menuToSelectMeasurement()
+            measureShape(selectedMeasurement, Trapezium())
+        }
+        else -> return
+    }
+    menuToContinueOrEnd()
+}
 
 fun runCalculator() {
     val selectInput: String

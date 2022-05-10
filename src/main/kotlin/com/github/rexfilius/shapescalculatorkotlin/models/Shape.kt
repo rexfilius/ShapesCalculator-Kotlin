@@ -1,6 +1,6 @@
 package com.github.rexfilius.shapescalculatorkotlin.models
 
-abstract class Shape: Measurable {
+abstract class Shape : Measurable {
 
     var length = 0.0
     var breadth = 0.0
@@ -12,4 +12,11 @@ abstract class Shape: Measurable {
     var baseLength = 0.0
     var radius = 0.0
 
+}
+
+fun measureShape(number: Int, shape: Shape) {
+    when (number) {
+        1 -> shape.calculateArea()
+        2 -> shape.calculatePerimeter()
+    }
 }

@@ -1,6 +1,7 @@
-package com.github.rexfilius.shapescalculatorkotlin.models
+package com.github.rexfilius.shapescalculatorkotlin.models.shape
 
-import com.github.rexfilius.shapescalculatorkotlin.screens.INVALID_DATA
+import com.github.rexfilius.shapescalculatorkotlin.models.Shape
+import com.github.rexfilius.shapescalculatorkotlin.screens.INVALID_INPUT
 
 class Trapezium : Shape() {
 
@@ -32,7 +33,7 @@ class Trapezium : Shape() {
                 println("Area of Trapezium: ${trapezium.area()}")
                 break
             } catch (e: NumberFormatException) {
-                println(INVALID_DATA)
+                println(INVALID_INPUT)
             }
         }
     }
@@ -64,7 +65,7 @@ class Trapezium : Shape() {
                 println("Perimeter of Trapezium: ${trapezium.perimeter()}")
                 break
             } catch (e: NumberFormatException) {
-                println(INVALID_DATA)
+                println(INVALID_INPUT)
             }
         }
     }

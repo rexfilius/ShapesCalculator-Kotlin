@@ -1,6 +1,7 @@
-package com.github.rexfilius.shapescalculatorkotlin.models
+package com.github.rexfilius.shapescalculatorkotlin.models.shape
 
-import com.github.rexfilius.shapescalculatorkotlin.screens.INVALID_DATA
+import com.github.rexfilius.shapescalculatorkotlin.models.Shape
+import com.github.rexfilius.shapescalculatorkotlin.screens.INVALID_INPUT
 
 class Triangle : Shape() {
 
@@ -27,7 +28,7 @@ class Triangle : Shape() {
                 println("Area of Triangle: ${triangle.area()}")
                 break
             } catch (e: NumberFormatException) {
-                println(INVALID_DATA)
+                println(INVALID_INPUT)
             }
         }
     }
@@ -54,7 +55,7 @@ class Triangle : Shape() {
                 println("Perimeter of Triangle: ${triangle.perimeter()}")
                 break
             } catch (e: NumberFormatException) {
-                println(INVALID_DATA)
+                println(INVALID_INPUT)
             }
         }
     }
